@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: rook
+  namespace: rook
+spec:
+  interval: 10m
+  url: https://github.com/rook/rook.git
