@@ -1,8 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: rook-ceph
-  namespace: rook-ceph
+  name: renovate
+  namespace: renovate
 spec:
   interval: 10m
-  url: https://github.com/rook/rook.git
+  url: https://github.com/renovatebot/renovate
+  ref:
+    tag: v11.35.4
