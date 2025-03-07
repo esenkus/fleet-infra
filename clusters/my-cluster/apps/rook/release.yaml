@@ -12,7 +12,12 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: rook-ceph
+        namespace: flux-system
+  install:
+    remediation:
+      retries: 3
   # Default values https://github.com/rook/rook/blob/master/deploy/charts/rook-ceph/values.yaml
   values:
+    enableDiscoveryDaemon: true
     monitoring:
       enabled: true
