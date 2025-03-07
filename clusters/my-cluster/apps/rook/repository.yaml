@@ -6,3 +6,5 @@ metadata:
 spec:
   interval: 10m
   url: oci://ghcr.io/gimlet-io/capacitor-manifests
+  ref:
+    semver: ">=0.1.0"
