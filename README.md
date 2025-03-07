@@ -26,6 +26,6 @@ Applications are grouped by the repository they are in.
   You will need to port-forward to the service to access it. use this to expose the service to the internet.
 
   ```
-  kubectl port-forward svc/capacitor 9000:9000 -n flux-system 
+  kubectl port-forward svc/capacitor 9000:9000 -n capacitor
   ```
   The app will be accessible via http://localhost:9000/
