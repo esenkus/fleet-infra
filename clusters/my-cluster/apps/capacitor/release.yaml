@@ -5,7 +5,7 @@ metadata:
   name: capacitor
   namespace: capacitor
 spec:
-  targetNamespace: flux-system
+  targetNamespace: capacitor
   interval: 10m
   wait: true
   prune: true
