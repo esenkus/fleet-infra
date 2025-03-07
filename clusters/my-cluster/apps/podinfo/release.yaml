@@ -13,8 +13,6 @@ spec:
         kind: HelmRepository
         name: podinfo
   # Default values https://github.com/stefanprodan/podinfo/blob/master/charts/podinfo/values.yaml
-  # ingress is used to expose the podinfo service. You will still need to port-forward to the service to access it.
-  # use this to expose the service to the internet `kubectl port-forward service/podinfo 9898:9898 -n podinfo`
   values:
     ingress:
       enabled: true
