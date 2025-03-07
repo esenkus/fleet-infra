@@ -20,4 +20,12 @@ Applications are grouped by the repository they are in.
 
   The app will be accessible via http://localhost:9898/
 
-- 
+### OCI Repositories
+
+- [Capacitor](https://github.com/gimlet-io/capacitor) is a general purpose UI for FluxCD.
+  You will need to port-forward to the service to access it. use this to expose the service to the internet.
+
+  ```
+  kubectl -n flux-system port-forward svc/capacitor 9000:9000
+  ```
+  The app will be accessible via http://localhost:9000/
