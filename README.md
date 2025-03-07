@@ -29,3 +29,32 @@ Applications are grouped by the repository they are in.
   kubectl port-forward svc/capacitor 9000:9000 -n capacitor
   ```
   The app will be accessible via http://localhost:9000/
+
+## Setup
+
+Fork this [fleet-infra](https://github.com/esenkus/fleet-infra) repository to your own github account.
+
+Install flux and then export github username and token as environment variables.
+```
+export GITHUB_TOKEN=ghp_yourToken
+export GITHUB_USER=yourUsername
+```
+After that run flux bootstrap to do all the work, don't forget to replace the owner with your github username.
+```
+flux bootstrap github \                                  
+  --owner=${GITHUB_USER} \
+  --repository=https://github.com/yourUsername/fleet-infra \
+  --branch=main \
+  --personal \
+  --path=clusters/my-cluster
+```
+
+## Uninstall
+
+To fully uninstall all flux configurations and apps run the following commands
+
+```
+flux uninstall --namespace=flux-system
+kubectl delete all -n podinfo --all
+kubectl delete all -n capacitor --all
+```
