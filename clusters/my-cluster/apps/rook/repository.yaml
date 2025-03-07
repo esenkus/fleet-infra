@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: rook
-  namespace: rook
+  name: rook-ceph
+  namespace: rook-ceph
 spec:
   interval: 10m
   url: https://github.com/rook/rook.git
