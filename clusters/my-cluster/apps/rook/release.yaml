@@ -1,15 +1,15 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: renovate
-  namespace: renovate
+  name: capacitor
+  namespace: flux-system
 spec:
-  releaseName: renovate
+  releaseName: capacitor
   interval: 5m
   chart:
     spec:
-      chart: renovate
+      chart: capacitor
       sourceRef:
-        kind: HelmRepository
-        name: renovate
+        kind: OCIRepository
+        name: capacitor
   # Default values https://github.com/rook/rook/blob/master/deploy/charts/rook-ceph/values.yaml
