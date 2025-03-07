@@ -16,3 +16,8 @@ spec:
     ingress:
       enabled: true
       className: nginx
+      hosts:
+        - host: podinfo.example.com
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
