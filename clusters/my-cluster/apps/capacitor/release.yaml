@@ -1,14 +1,15 @@
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
+# There is no `kind: OCIRelease`, so the `kind: Kustomization` must be used to apply resources from an OCI repository.
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
 metadata:
   name: capacitor
   namespace: flux-system
 spec:
-  releaseName: capacitor
+  targetNamespace: flux-system
   interval: 10m
-  chart:
-    spec:
-      chart: capacitor
-      sourceRef:
-        kind: OCIRepository
-        name: capacitor
+  wait: true
+  prune: true
+  path: "./"
+  sourceRef:
+    kind: OCIRepository
+    name: capacitor
