@@ -15,7 +15,7 @@ Applications are grouped by the repository they are in.
   You will still need to port-forward to the service to access it. use this to expose the service to the internet.
 
   ```
-  kubectl port-forward service/podinfo 9898:9898 -n podinfo
+  kubectl port-forward svc/podinfo 9898:9898 -n podinfo
   ```
 
   The app will be accessible via http://localhost:9898/
@@ -26,6 +26,6 @@ Applications are grouped by the repository they are in.
   You will need to port-forward to the service to access it. use this to expose the service to the internet.
 
   ```
-  kubectl -n flux-system port-forward svc/capacitor 9000:9000
+  kubectl port-forward svc/capacitor 9000:9000 -n flux-system 
   ```
   The app will be accessible via http://localhost:9000/
