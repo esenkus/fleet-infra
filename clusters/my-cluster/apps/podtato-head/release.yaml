@@ -2,15 +2,18 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: podtato-head
-  namespace: podtato-head
+  namespace: flux-system
 spec:
   releaseName: podtato-head
+  targetNamespace: podtato-head
   interval: 5m
   chart:
     spec:
       chart: ./delivery/chart
+      reconcileStrategy: ChartVersion
       sourceRef:
         kind: GitRepository
         name: podtato-head
+        namespace: flux-system
   install:
     createNamespace: true
