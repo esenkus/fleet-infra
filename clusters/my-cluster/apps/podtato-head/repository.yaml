@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: podtato-head
-  namespace: podtato-head
-spec:
-  interval: 5m
-  url: https://github.com/podtato-head/podtato-head
