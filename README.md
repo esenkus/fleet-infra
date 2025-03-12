@@ -30,6 +30,14 @@ Applications are grouped by the repository they are in.
   ```
   The app will be accessible via http://localhost:9000/
 
+### Git Repositories
+
+- TODO
+
+### Bucket (S3, GCS, etc) Repositories
+
+- TODO
+
 ## Setup
 
 Fork this [fleet-infra](https://github.com/esenkus/fleet-infra) repository to your own github account.
